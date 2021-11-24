@@ -1,5 +1,127 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+* {
   box-sizing: border-box;
+}
+
+nav {
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; */
+  width: 100%;
+  /* border: 1px solid #ffffff; */
+  background-color: #ffffff;
+  /* background-color: #ec2a2a; */
+  height: 100px;
+}
+
+nav img {
+  margin-left: 90px;
+  margin-top: 31px;
+}
+nav ul {
+  float: right;
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center; */
+  list-style: none;
+  margin-right: 99px;
+  margin-top: 43px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 22px;
+  cursor: pointer;
+  /* line-height: 50px; */
+}
+.menu li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  color: #171717;
+}
+
+.menu li a.active,
+.menu li a:hover {
+  color: #0fc9c3;
+  transition: all 0.3s linear;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #171717;
+  float: right;
+  line-height: 99px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .menu li a {
+    font-size: 15px;
+  }
+}
+
+.top-section {
+  width: 100%;
+  height: 350px;
+  background: url("./images/AmeliaWoods.png");
+  background-position: center;
+  opacity: 0.6;
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  margin: -1px 0;
+}
+
+@media only screen and (max-width: 650px) {
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 18vh;
+    background: #ffffff;
+    border: none;
+    top: 70px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  nav ul li {
+    display: block;
+    line-height: 10px;
+    margin: 18px 0;
+  }
+
+  .menu li a {
+    font-size: 13px;
+  }
+
+  .menu li a.active {
+    color: #171717;
+  }
+
+  .menu li a:hover {
+    background: none;
+    color: #0fc9c3;
+  }
+
+  #check:checked ~ .menu {
+    left: 0;
+  }
 }
