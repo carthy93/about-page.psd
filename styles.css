@@ -50,7 +50,7 @@ nav ul li {
   color: #171717;
   float: right;
   line-height: 99px;
-  margin-right: 40px;
+  margin-right: 43px;
   cursor: pointer;
   display: none;
 }
@@ -83,7 +83,7 @@ nav ul li {
 }
 
 .top-section p {
-  width: 29%;
+  max-width: 29%;
   text-align: center;
   font-size: 15px;
   font-family: "Nunito Sans", sans-serif;
@@ -131,28 +131,59 @@ nav ul li {
   display: flex;
 }
 
-.about-me img {
+.portrait img {
   width: 100%;
   height: 565px;
   object-fit: cover;
 }
+
 .portrait {
   width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .about {
   width: 50%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
   background-color: #f5f5f5;
 }
 
+.about h1 {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 90px;
+}
+
+.about p {
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #979797;
+  padding: 0px 90px;
+}
+
+.signature {
+  width: 220px;
+  height: 60px;
+  margin-top: 1em;
+  padding-left: 82px;
+}
+
+.signature img {
+  max-width: 220px;
+  height: 60px;
+  object-fit: cover;
+  margin: auto;
+}
 .need-a-project {
   width: 100%;
-  height: 395px;
+  height: 396px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,15 +191,98 @@ nav ul li {
   text-align: center;
 }
 
+.need-a-project h1 {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.need-a-project p {
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  width: 35%;
+  color: #979797;
+}
+
+.btn {
+  width: 180px;
+  height: 52px;
+  background-color: #10c9c3;
+  color: #dfecec;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 29px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: rgb(17, 223, 154);
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
 footer {
   width: 100%;
-  height: 284px;
+  /* height: 285px; */
   background-color: #141414;
+  color: #b8b8b8;
+  padding: 90px;
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.container a {
+  text-decoration: none;
+  color: #b8b8b8;
+  display: block;
+}
+
+.column-1 {
+  margin-top: -11px;
+}
+
+.column-2 {
+  margin-top: 14px;
+}
+
+/* .column-3 {
+  margin-left: 300px;
+} */
+
+/* .column-5 {
+  position: relative;
+  left: 80px;
+} */
+
+.column-1 h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #f0f0f0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container li a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+  transition: all 0.5s ease;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .checkbtn {
     display: block;
+    font-size: 28px;
   }
 
   nav img {
@@ -178,7 +292,7 @@ footer {
   nav ul {
     position: fixed;
     width: 100%;
-    height: 18vh;
+    height: auto;
     background: #ffffff;
     border: none;
     top: 70px;
@@ -215,16 +329,6 @@ footer {
   .top-section {
     width: 100%;
     height: auto;
-    /* opacity: 0.7; */
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; */
-    /* background-size: 970px;
-    background-position: -105px -162px;
-    background-repeat: no-repeat; */
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
   }
 
   .top-section h1 {
@@ -235,11 +339,148 @@ footer {
     font-size: 12px;
     width: 45%;
   }
+
+  .top-section,
+  .about,
+  .need-a-project {
+    padding: 2rem 0;
+  }
+
+  .credits {
+    padding: 6rem;
+    height: auto;
+  }
+
+  .about-me {
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .portrait,
+  .about {
+    width: 100%;
+  }
+
+  .hours,
+  .likes {
+    padding-right: 30px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   nav img {
     margin-left: 33px;
     margin-top: 21px;
+  }
+
+  .checkbtn {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    border: none;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    line-height: 8px;
+    margin: 18px 0;
+  }
+
+  .menu li a {
+    font-size: 9px;
+  }
+
+  .menu li a.active {
+    color: #171717;
+  }
+
+  .menu li a:hover {
+    background: none;
+    color: #0fc9c3;
+  }
+
+  #check:checked ~ .menu {
+    left: 0;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .top-section h1 {
+    font-size: 22px;
+  }
+
+  .top-section p {
+    font-size: 10px;
+  }
+
+  .credits {
+    padding: 4rem;
+    height: auto;
+  }
+
+  .projects,
+  .hours,
+  .feedbacks,
+  .likes {
+    right: 0;
+  }
+
+  .about-me {
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about h1,
+  .need-a-project h1 {
+    font-size: 25px;
+  }
+
+  .about,
+  .need-a-project p {
+    font-size: 13px;
+  }
+
+  .about {
+    padding: 2rem 0;
+  }
+
+  .portrait,
+  .about {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100px;
+    height: 32px;
+    font-size: 10px;
+  }
+
+  .signature {
+    width: 180px;
+    height: 50px;
+  }
+
+  .signature img {
+    max-width: 8;
+    height: 50px;
+    object-fit: cover;
+    margin: auto;
+  }
+
+  .hours,
+  .likes {
+    padding-right: 30px;
   }
 }
