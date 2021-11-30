@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- <header> -->
-    <nav>
+    <nav class="header">
       <input type="checkbox" id="check" />
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
@@ -30,10 +30,14 @@
       <img src="./images/logo.png" alt="logo-img" />
       <ul class="menu">
         <li><a href="#">Home</a></li>
-        <li><a class="active" href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a class="active" href="#about-me">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="image">
+      <img src="./images/AmeliaWoods.png" alt="full-image of Amelia" />
+    </div>
     <!-- </header> -->
     <section class="top-section">
       <!-- <div class="top"> -->
@@ -74,7 +78,7 @@
         </div>
       </div>
     </section>
-    <section class="about-me">
+    <section class="about-me" id="about-me">
       <div class="portrait">
         <img src="./images/about-me.png" alt="portrait image" />
       </div>
@@ -104,40 +108,46 @@
     </section>
     <footer>
       <div class="container">
-        <div class="column-1">
-          <h4>Piroll Design, Inc.</h4>
-          <span> &copy; 2017 Piroll. All rights reserved. </span>
-          <br />
-          <span>Designed by robirurk.</span>
+        <div class="part-1">
+          <div class="column-1">
+            <h4>Piroll Design, Inc.</h4>
+            <span> &copy; 2017 Piroll. All rights reserved. </span>
+            <br />
+            <span>Designed by robirurk.</span>
+          </div>
+          <div class="column-2">
+            <span>hello@pirolltheme.com</span>
+            <br />
+            <span>+44 987 065 908</span>
+          </div>
         </div>
-        <div class="column-2">
-          <span>hello@pirolltheme.com</span>
-          <br />
-          <span>+44 987 065 908</span>
-        </div>
-        <div class="column-3">
-          <ul>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Carreer</a></li>
-          </ul>
-        </div>
-        <div class="column-4">
-          <ul>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Legals</a></li>
-          </ul>
-        </div>
-        <div class="column-5">
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Dribbble</a></li>
-          </ul>
+        <div class="part-2">
+          <div class="column-3">
+            <ul>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Carreer</a></li>
+            </ul>
+          </div>
+          <div class="column-4">
+            <ul>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Events</a></li>
+              <li id="contact">
+                <a href="mailto:hello@pirolltheme.com">Contact</a>
+              </li>
+              <li><a href="#">Legals</a></li>
+            </ul>
+          </div>
+          <div class="column-5">
+            <ul>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://twitter.com/">Twitter</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
+              <li><a href="https://dribbble.com/">Dribbble</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
